@@ -8,16 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		796C935C7929027314DFA6D9 /* Pods_chefofthewild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F86845FD2DD38874D6F6182E /* Pods_chefofthewild.framework */; };
+		B40CE38E1E736682009F5FB7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40CE38D1E736682009F5FB7 /* TableViewController.swift */; };
 		B480D1011E735CF5008E5798 /* RestoreHeartsDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = B480D1001E735CF5008E5798 /* RestoreHeartsDish.swift */; };
 		B4A52A311E734448002FDC82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A52A301E734448002FDC82 /* AppDelegate.swift */; };
-		B4A52A331E734448002FDC82 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A52A321E734448002FDC82 /* FirstViewController.swift */; };
+		B4A52A331E734448002FDC82 /* RestoreHeartsDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A52A321E734448002FDC82 /* RestoreHeartsDishesViewController.swift */; };
 		B4A52A351E734448002FDC82 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A52A341E734448002FDC82 /* SecondViewController.swift */; };
 		B4A52A381E734448002FDC82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A52A361E734448002FDC82 /* Main.storyboard */; };
 		B4A52A3A1E734448002FDC82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A52A391E734448002FDC82 /* Assets.xcassets */; };
 		B4A52A3D1E734448002FDC82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A52A3B1E734448002FDC82 /* LaunchScreen.storyboard */; };
 		B4A52A481E734448002FDC82 /* chefofthewildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A52A471E734448002FDC82 /* chefofthewildTests.swift */; };
 		B4A52A531E734449002FDC82 /* chefofthewildUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A52A521E734449002FDC82 /* chefofthewildUITests.swift */; };
-		B4A52A611E7345F2002FDC82 /* ExampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A52A601E7345F2002FDC82 /* ExampleCollectionViewCell.swift */; };
+		B4A52A611E7345F2002FDC82 /* DishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A52A601E7345F2002FDC82 /* DishCollectionViewCell.swift */; };
 		B4CB020E1E7356C2008C764D /* restore_hearts_dishes.json in Resources */ = {isa = PBXBuildFile; fileRef = B4CB020D1E7356C2008C764D /* restore_hearts_dishes.json */; };
 		B4CB02101E7356ED008C764D /* RestoreHeartsApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CB020F1E7356ED008C764D /* RestoreHeartsApiClient.swift */; };
 		B5E9D3117BE6E0DD49FD59F5 /* Pods_chefofthewildTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68343606CC246D01FBECBA7A /* Pods_chefofthewildTests.framework */; };
@@ -50,10 +51,11 @@
 		63FB5E6E3AD42E96AD27E57F /* Pods-chefofthewildUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chefofthewildUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-chefofthewildUITests/Pods-chefofthewildUITests.release.xcconfig"; sourceTree = "<group>"; };
 		649B2AF10123EC628692385A /* Pods-chefofthewildUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chefofthewildUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chefofthewildUITests/Pods-chefofthewildUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		68343606CC246D01FBECBA7A /* Pods_chefofthewildTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chefofthewildTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B40CE38D1E736682009F5FB7 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B480D1001E735CF5008E5798 /* RestoreHeartsDish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreHeartsDish.swift; sourceTree = "<group>"; };
 		B4A52A2D1E734448002FDC82 /* chefofthewild.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chefofthewild.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A52A301E734448002FDC82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B4A52A321E734448002FDC82 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		B4A52A321E734448002FDC82 /* RestoreHeartsDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreHeartsDishesViewController.swift; sourceTree = "<group>"; };
 		B4A52A341E734448002FDC82 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B4A52A371E734448002FDC82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4A52A391E734448002FDC82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,7 +67,7 @@
 		B4A52A4E1E734449002FDC82 /* chefofthewildUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chefofthewildUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A52A521E734449002FDC82 /* chefofthewildUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chefofthewildUITests.swift; sourceTree = "<group>"; };
 		B4A52A541E734449002FDC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4A52A601E7345F2002FDC82 /* ExampleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewCell.swift; sourceTree = "<group>"; };
+		B4A52A601E7345F2002FDC82 /* DishCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishCollectionViewCell.swift; sourceTree = "<group>"; };
 		B4CB020D1E7356C2008C764D /* restore_hearts_dishes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restore_hearts_dishes.json; sourceTree = "<group>"; };
 		B4CB020F1E7356ED008C764D /* RestoreHeartsApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreHeartsApiClient.swift; sourceTree = "<group>"; };
 		F86845FD2DD38874D6F6182E /* Pods_chefofthewild.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chefofthewild.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,7 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				B4CB02111E735806008C764D /* Customs */,
-				B4A52A321E734448002FDC82 /* FirstViewController.swift */,
+				B4A52A321E734448002FDC82 /* RestoreHeartsDishesViewController.swift */,
 				B4A52A341E734448002FDC82 /* SecondViewController.swift */,
 			);
 			name = ViewControllers;
@@ -239,7 +241,8 @@
 		B4CB02111E735806008C764D /* Customs */ = {
 			isa = PBXGroup;
 			children = (
-				B4A52A601E7345F2002FDC82 /* ExampleCollectionViewCell.swift */,
+				B4A52A601E7345F2002FDC82 /* DishCollectionViewCell.swift */,
+				B40CE38D1E736682009F5FB7 /* TableViewController.swift */,
 			);
 			name = Customs;
 			sourceTree = "<group>";
@@ -530,10 +533,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4CB02101E7356ED008C764D /* RestoreHeartsApiClient.swift in Sources */,
+				B40CE38E1E736682009F5FB7 /* TableViewController.swift in Sources */,
 				B4A52A351E734448002FDC82 /* SecondViewController.swift in Sources */,
-				B4A52A611E7345F2002FDC82 /* ExampleCollectionViewCell.swift in Sources */,
+				B4A52A611E7345F2002FDC82 /* DishCollectionViewCell.swift in Sources */,
 				B4A52A311E734448002FDC82 /* AppDelegate.swift in Sources */,
-				B4A52A331E734448002FDC82 /* FirstViewController.swift in Sources */,
+				B4A52A331E734448002FDC82 /* RestoreHeartsDishesViewController.swift in Sources */,
 				B480D1011E735CF5008E5798 /* RestoreHeartsDish.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  RestoreHeartsDishesViewController.swift
 //  chefofthewild
 //
 //  Created by Jorge Villa on 3/10/17.
@@ -31,7 +31,7 @@ struct CardLayoutSetupOptions {
     var numberOfCards: Int = 15
 }
 
-class FirstViewController : UICollectionViewController, HFCardCollectionViewLayoutDelegate {
+class RestoreHeartsDishesViewController : UICollectionViewController, HFCardCollectionViewLayoutDelegate {
     
     @IBOutlet var backgroundView: UIView?
     @IBOutlet var backgroundNavigationBar: UINavigationBar?
@@ -57,14 +57,14 @@ class FirstViewController : UICollectionViewController, HFCardCollectionViewLayo
     }
     
     func cardCollectionViewLayout(_ collectionViewLayout: HFCardCollectionViewLayout, willRevealCardAtIndex index: Int) {
-        if let cell = self.collectionView?.cellForItem(at: IndexPath(item: index, section: 0)) as? ExampleCollectionViewCell {
+        if let cell = self.collectionView?.cellForItem(at: IndexPath(item: index, section: 0)) as? DishCollectionViewCell {
             cell.cardCollectionViewLayout = self.cardCollectionViewLayout
             cell.cardIsRevealed(true)
         }
     }
     
     func cardCollectionViewLayout(_ collectionViewLayout: HFCardCollectionViewLayout, willUnrevealCardAtIndex index: Int) {
-        if let cell = self.collectionView?.cellForItem(at: IndexPath(item: index, section: 0)) as? ExampleCollectionViewCell {
+        if let cell = self.collectionView?.cellForItem(at: IndexPath(item: index, section: 0)) as? DishCollectionViewCell {
             cell.cardCollectionViewLayout = self.cardCollectionViewLayout
             cell.cardIsRevealed(false)
         }
@@ -75,10 +75,11 @@ class FirstViewController : UICollectionViewController, HFCardCollectionViewLayo
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! ExampleCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! DishCollectionViewCell
         cell.backgroundColor = self.colorArray[indexPath.item]
         
         let heartDish = self.heartDishes[indexPath.item]
+        cell.dishDetails = heartDish.details
         cell.labelText?.text = heartDish.food
         
         return cell

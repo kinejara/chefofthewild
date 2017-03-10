@@ -15,4 +15,14 @@ struct RestoreHeartsDish {
     var notes: String
     var effect: String
     
+    var details : [String : String] {
+        get {
+            var details = [String : String]()
+            details["Effect"] = self.effect
+            details["Ingredients"] = self.ingredients
+            details["Notes"] = self.notes
+            
+            return details
+        }
+    }
 }

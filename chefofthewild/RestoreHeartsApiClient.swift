@@ -22,7 +22,7 @@ class RestoreHeartsApiClient {
                 
                 for (_, subJson):(String, JSON) in json {
                     let food = subJson["Food"].stringValue
-                    let ingridients = subJson["Ingridients"].stringValue
+                    let ingridients = subJson["Ingredients"].stringValue
                     let notes = subJson["Notes"].stringValue
                     let effect = subJson["Effect"].stringValue
                     let heartDish = RestoreHeartsDish(food: food, ingredients: ingridients, notes: notes, effect: effect)
