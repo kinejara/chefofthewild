@@ -1,0 +1,6 @@
+framework module Pods_chefofthewildUITests {
+  umbrella header "Pods-chefofthewildUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
