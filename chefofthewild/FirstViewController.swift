@@ -33,22 +33,18 @@ struct CardLayoutSetupOptions {
 
 class FirstViewController : UICollectionViewController, HFCardCollectionViewLayoutDelegate {
     
-    var cardCollectionViewLayout: HFCardCollectionViewLayout?
-    
     @IBOutlet var backgroundView: UIView?
     @IBOutlet var backgroundNavigationBar: UINavigationBar?
     
+    var cardCollectionViewLayout: HFCardCollectionViewLayout?
+    var heartDishes = RestoreHeartsApiClient.fetchRestoreHeartsDishes()
+    var colorArray: [UIColor] = []
     var cardLayoutOptions: CardLayoutSetupOptions = CardLayoutSetupOptions()
     var shouldSetupBackgroundView = false
-    
-    var colorArray: [UIColor] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupExample()
-        
-        let foo = RestoreHeartsApiClient.fetchRestoreHeartsDishes()
-        print(foo.description)
     }
     
     // MARK: CollectionView
@@ -74,15 +70,17 @@ class FirstViewController : UICollectionViewController, HFCardCollectionViewLayo
         }
     }
     
-    
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.colorArray.count
+        return self.heartDishes.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! ExampleCollectionViewCell
         cell.backgroundColor = self.colorArray[indexPath.item]
+        
+        let heartDish = self.heartDishes[indexPath.item]
+        cell.labelText?.text = heartDish.food
+        
         return cell
     }
     
@@ -90,50 +88,10 @@ class FirstViewController : UICollectionViewController, HFCardCollectionViewLayo
         self.cardCollectionViewLayout?.revealCardAt(index: indexPath.item)
     }
     
-    override func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let tempColor = self.colorArray[sourceIndexPath.item]
-        self.colorArray.remove(at: sourceIndexPath.item)
-        self.colorArray.insert(tempColor, at: destinationIndexPath.item)
-    }
-    
     // MARK: Actions
     
     @IBAction func goBackAction() {
         _ = self.navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func addCardAction() {
-        let index = 0
-        if(self.colorArray.count == 1 || self.cardCollectionViewLayout!.revealedIndex >= 0) {
-            self.cardCollectionViewLayout?.unrevealCard(completion: {
-                self.colorArray.insert(self.getRandomColor(), at: index)
-                self.collectionView?.insertItems(at: [IndexPath(item: index, section: 0)])
-            })
-        } else {
-            self.colorArray.insert(self.getRandomColor(), at: index)
-            self.collectionView?.insertItems(at: [IndexPath(item: index, section: 0)])
-        }
-        
-        if(self.colorArray.count == 1) {
-            self.cardCollectionViewLayout?.revealCardAt(index: 0)
-        }
-    }
-    
-    @IBAction func deleteCardAtIndex0orSelected() {
-        var index = 0
-        if(self.cardCollectionViewLayout!.revealedIndex >= 0) {
-            index = self.cardCollectionViewLayout!.revealedIndex
-        }
-        if(self.colorArray.count > index) {
-            self.cardCollectionViewLayout?.unrevealCard(completion: {
-                self.colorArray.remove(at: index)
-                self.collectionView?.deleteItems(at: [IndexPath(item: index, section: 0)])
-                
-                if(self.colorArray.count == 1) {
-                    self.cardCollectionViewLayout?.revealCardAt(index: 0)
-                }
-            })
-        }
     }
     
     // MARK: Private Functions
