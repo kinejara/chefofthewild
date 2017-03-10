@@ -1,12 +1,15 @@
 PODS:
   - HFCardCollectionViewLayout (0.3.3)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - HFCardCollectionViewLayout
+  - SwiftyJSON (~> 3.1)
 
 SPEC CHECKSUMS:
   HFCardCollectionViewLayout: 8eeb7c5286fc9b5bfcf924081e10a0357198e854
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: dc7f2bc4afca5889f66c2d1d696feab796ea8164
+PODFILE CHECKSUM: 7d856965808a9c6420bc7616d797cfb09d013ee6
 
 COCOAPODS: 1.2.0

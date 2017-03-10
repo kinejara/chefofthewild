@@ -7,6 +7,7 @@ target 'chefofthewild' do
 
   # Pods for chefofthewild
   pod 'HFCardCollectionViewLayout'
+  pod 'SwiftyJSON', '~> 3.1'
 
   target 'chefofthewildTests' do
     inherit! :search_paths
