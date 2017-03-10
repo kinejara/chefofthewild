@@ -1,0 +1,90 @@
+[
+   {
+      "Food":"Apple Pie",
+      "Ingredients":"Apple Tabantha Wheat Cane Sugar Goat Butter",
+      "Effect":"Restore six hearts.",
+      "Notes":""
+   },
+   {
+      "Food":"Baked Apple",
+      "Ingredients":"Apple",
+      "Effect":"Restore three quarters of a heart.",
+      "Notes":"Open flame."
+   },
+   {
+      "Food":"Baked Palm Fruit",
+      "Ingredients":"Palm Fruit",
+      "Effect":"Restore one and a half hearts.",
+      "Notes":"Open flame."
+   },
+   {
+      "Food":"Creamy Heart Soup",
+      "Ingredients":"Fresh Milk Voltfruit Hydromelon Hearty Radish x2",
+      "Effect":"Restore thirteen hearts.",
+      "Notes":""
+   },
+   {
+      "Food":"Egg Pudding",
+      "Ingredients":"Apple Fresh Milk Bird Egg Cane Sugar",
+      "Effect":"Restores four hearts."
+   },
+   {
+      "Food":"Fish and Mushroom Skewer",
+      "Ingredients":"Fleet-Lotus Seeds Zapshroom Staminoka Bass",
+      "Effect":"Restore seven hearts.",
+      "Notes":""
+   },
+   {
+      "Food":"Fish Skewer",
+      "Ingredients":"Hyrule Bass",
+      "Effect":"Restore two hearts.",
+      "Notes":""
+   },
+   {
+      "Food":"Fried Egg and Rice",
+      "Ingredients":"Hylian Rice Bird Egg",
+      "Effect":"Restore four hearts.",
+      "Notes":""
+   },
+   {
+      "Food":"Fried Wild Greens",
+      "Ingredients":"Hyrule H... hearts.",
+      "Notes":"Open flame."
+   },
+   {
+      "Food":"Seared Steak",
+      "Ingredients":"Raw Meat",
+      "Effect":"Restore one and a half hearts.",
+      "Notes":"Open flame."
+   },
+   {
+      "Food":"Simmered Fruit",
+      "Ingredients":"Apple",
+      "Effect":"Restore one heart.",
+      "Notes":"For each additional Apple or various other fruit the meal restores one more heart. It's worth noting you can sell those for 50 rupees if you use 5 apples making it a good way to earn money."
+   },
+   {
+      "Food":"Steamed Fish",
+      "Ingredients":"Apple Hyrule Herb Hyrule Bass",
+      "Effect":"Restore five hearts.",
+      "Notes":""
+   },
+   {
+      "Food":"Steamed Mushrooms",
+      "Ingredients":"Apple Stamella Shroom Blue Nightshade",
+      "Effect":"Restore five hearts.",
+      "Notes":"Using different herbs fruits and mushrooms will change the number of hearts restored."
+   },
+   {
+      "Food":"Toasted Hearty Truffle",
+      "Ingredients":"Hearty Truffle",
+      "Effect":"Restore three hearts.",
+      "Notes":"Open flame."
+   },
+   {
+      "Food":"Toasty Hylian Shroom",
+      "Ingredients":"Hylian Shroom",
+      "Effect":"Restore three quarters of a heart.",
+      "Notes":"Open flame."
+   }
+]

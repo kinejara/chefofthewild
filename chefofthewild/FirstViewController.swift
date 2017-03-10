@@ -46,6 +46,9 @@ class FirstViewController : UICollectionViewController, HFCardCollectionViewLayo
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupExample()
+        
+        let foo = RestoreHeartsApiClient.fetchRestoreHeartsDishes()
+        print(foo.description)
     }
     
     // MARK: CollectionView

@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -62,15 +61,15 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="now-YM-tHj" kind="relationship" relationship="viewControllers" id="AcR-EW-e3O"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="fFx-lU-Y2b"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Example-->
+        <!--Restore Hearts-->
         <scene sceneID="dhf-rz-4XS">
             <objects>
                 <collectionViewController id="oai-Cn-OVG" customClass="FirstViewController" customModule="chefofthewild" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,25 +158,7 @@
                             <outlet property="delegate" destination="oai-Cn-OVG" id="KBM-2h-nLs"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Example" id="OcK-ol-PA2">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="JWB-xJ-kjw">
-                                <connections>
-                                    <action selector="addCardAction" destination="oai-Cn-OVG" id="9gE-AN-9Ik"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem systemItem="trash" id="j27-JI-VM4">
-                                <connections>
-                                    <action selector="deleteCardAtIndex0orSelected" destination="oai-Cn-OVG" id="vCM-YU-hl9"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem systemItem="stop" id="3D4-qE-yus">
-                                <connections>
-                                    <action selector="collapseAllCardsAction" destination="z4T-No-vSw" id="6Y2-rk-lNx"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Restore Hearts" id="OcK-ol-PA2"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="384" height="512"/>
                     <connections>
@@ -201,23 +182,6 @@
                                             <action selector="goBackAction" destination="oai-Cn-OVG" id="KSW-0B-iDg"/>
                                         </connections>
                                     </barButtonItem>
-                                    <rightBarButtonItems>
-                                        <barButtonItem systemItem="add" id="3oT-Lz-Xff">
-                                            <connections>
-                                                <action selector="addCardAction" destination="oai-Cn-OVG" id="zTe-ke-fUP"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem systemItem="trash" id="4mS-o3-2lG">
-                                            <connections>
-                                                <action selector="deleteCardAtIndex0orSelected" destination="oai-Cn-OVG" id="BpQ-yT-cvh"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem systemItem="stop" id="XT5-yg-p3b">
-                                            <connections>
-                                                <action selector="collapseAllCardsAction" destination="z4T-No-vSw" id="mpt-at-CMC"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </rightBarButtonItems>
                                 </navigationItem>
                             </items>
                         </navigationBar>

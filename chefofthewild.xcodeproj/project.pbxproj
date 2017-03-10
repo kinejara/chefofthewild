@@ -17,6 +17,8 @@
 		B4A52A481E734448002FDC82 /* chefofthewildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A52A471E734448002FDC82 /* chefofthewildTests.swift */; };
 		B4A52A531E734449002FDC82 /* chefofthewildUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A52A521E734449002FDC82 /* chefofthewildUITests.swift */; };
 		B4A52A611E7345F2002FDC82 /* ExampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A52A601E7345F2002FDC82 /* ExampleCollectionViewCell.swift */; };
+		B4CB020E1E7356C2008C764D /* restore_hearts_dishes.json in Resources */ = {isa = PBXBuildFile; fileRef = B4CB020D1E7356C2008C764D /* restore_hearts_dishes.json */; };
+		B4CB02101E7356ED008C764D /* RestoreHeartsApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CB020F1E7356ED008C764D /* RestoreHeartsApiClient.swift */; };
 		B5E9D3117BE6E0DD49FD59F5 /* Pods_chefofthewildTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68343606CC246D01FBECBA7A /* Pods_chefofthewildTests.framework */; };
 		F2CC2914BFB734DFCD1DE3D0 /* Pods_chefofthewildUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BEBB14676CF4B6ABB6DAA8 /* Pods_chefofthewildUITests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,8 @@
 		B4A52A521E734449002FDC82 /* chefofthewildUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chefofthewildUITests.swift; sourceTree = "<group>"; };
 		B4A52A541E734449002FDC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4A52A601E7345F2002FDC82 /* ExampleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewCell.swift; sourceTree = "<group>"; };
+		B4CB020D1E7356C2008C764D /* restore_hearts_dishes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restore_hearts_dishes.json; sourceTree = "<group>"; };
+		B4CB020F1E7356ED008C764D /* RestoreHeartsApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreHeartsApiClient.swift; sourceTree = "<group>"; };
 		F86845FD2DD38874D6F6182E /* Pods_chefofthewild.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chefofthewild.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -116,6 +120,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B43BA92F1E73552200493A11 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B4A52A301E734448002FDC82 /* AppDelegate.swift */,
+				B4CB02061E735534008C764D /* ViewControllers */,
+				B4CB020B1E7355E3008C764D /* ViewModels */,
+				B4CB020A1E7355D0008C764D /* Models */,
+				B4CB02081E735585008C764D /* ApiClients */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		B4A52A241E734448002FDC82 = {
 			isa = PBXGroup;
 			children = (
@@ -141,14 +157,8 @@
 		B4A52A2F1E734448002FDC82 /* chefofthewild */ = {
 			isa = PBXGroup;
 			children = (
-				B4A52A601E7345F2002FDC82 /* ExampleCollectionViewCell.swift */,
-				B4A52A301E734448002FDC82 /* AppDelegate.swift */,
-				B4A52A321E734448002FDC82 /* FirstViewController.swift */,
-				B4A52A341E734448002FDC82 /* SecondViewController.swift */,
-				B4A52A361E734448002FDC82 /* Main.storyboard */,
-				B4A52A391E734448002FDC82 /* Assets.xcassets */,
-				B4A52A3B1E734448002FDC82 /* LaunchScreen.storyboard */,
-				B4A52A3E1E734448002FDC82 /* Info.plist */,
+				B43BA92F1E73552200493A11 /* Classes */,
+				B4CB02091E73559E008C764D /* Resources */,
 			);
 			path = chefofthewild;
 			sourceTree = "<group>";
@@ -169,6 +179,66 @@
 				B4A52A541E734449002FDC82 /* Info.plist */,
 			);
 			path = chefofthewildUITests;
+			sourceTree = "<group>";
+		};
+		B4CB02061E735534008C764D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4CB02111E735806008C764D /* Customs */,
+				B4A52A321E734448002FDC82 /* FirstViewController.swift */,
+				B4A52A341E734448002FDC82 /* SecondViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B4CB02081E735585008C764D /* ApiClients */ = {
+			isa = PBXGroup;
+			children = (
+				B4CB020F1E7356ED008C764D /* RestoreHeartsApiClient.swift */,
+			);
+			name = ApiClients;
+			sourceTree = "<group>";
+		};
+		B4CB02091E73559E008C764D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B4CB020C1E735603008C764D /* JSON */,
+				B4A52A361E734448002FDC82 /* Main.storyboard */,
+				B4A52A3B1E734448002FDC82 /* LaunchScreen.storyboard */,
+				B4A52A3E1E734448002FDC82 /* Info.plist */,
+				B4A52A391E734448002FDC82 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B4CB020A1E7355D0008C764D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B4CB020B1E7355E3008C764D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		B4CB020C1E735603008C764D /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				B4CB020D1E7356C2008C764D /* restore_hearts_dishes.json */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		B4CB02111E735806008C764D /* Customs */ = {
+			isa = PBXGroup;
+			children = (
+				B4A52A601E7345F2002FDC82 /* ExampleCollectionViewCell.swift */,
+			);
+			name = Customs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +363,7 @@
 				B4A52A3D1E734448002FDC82 /* LaunchScreen.storyboard in Resources */,
 				B4A52A3A1E734448002FDC82 /* Assets.xcassets in Resources */,
 				B4A52A381E734448002FDC82 /* Main.storyboard in Resources */,
+				B4CB020E1E7356C2008C764D /* restore_hearts_dishes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4CB02101E7356ED008C764D /* RestoreHeartsApiClient.swift in Sources */,
 				B4A52A351E734448002FDC82 /* SecondViewController.swift in Sources */,
 				B4A52A611E7345F2002FDC82 /* ExampleCollectionViewCell.swift in Sources */,
 				B4A52A311E734448002FDC82 /* AppDelegate.swift in Sources */,
