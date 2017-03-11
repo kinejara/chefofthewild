@@ -1,5 +1,5 @@
 //
-//  RestoreHeartsApiClient.swift
+//  DishesApiClient.swift
 //  chefofthewild
 //
 //  Created by Jorge Villa on 3/10/17.
@@ -10,12 +10,20 @@ import Foundation
 import SwiftyJSON
 
 
-class RestoreHeartsApiClient {
+class DishesApiClient {
+    
+    class func fetchRestoreStaminaDishes() -> [DishesModel] {
+        return self.fetchDishesWithPath(path: "restore_stamina_dishes")
+    }
+    
+    class func fetchRestoreHeartsDishes() -> [DishesModel] {
+        return self.fetchDishesWithPath(path: "restore_hearts_dishes")
+    }
 
-    class func fetchRestoreHeartsDishes() -> [RestoreHeartsDish] {
-        var heartDishes = [RestoreHeartsDish]()
+    class func fetchDishesWithPath(path: String) -> [DishesModel] {
+        var heartDishes = [DishesModel]()
         
-        if let path = Bundle.main.path(forResource: "restore_hearts_dishes", ofType: "json") {
+        if let path = Bundle.main.path(forResource: path, ofType: "json") {
             do {
                 let jsonData = try NSData(contentsOfFile: path, options: [])
                 let json = JSON(data: jsonData as Data)
@@ -25,7 +33,7 @@ class RestoreHeartsApiClient {
                     let ingridients = subJson["Ingredients"].stringValue
                     let notes = subJson["Notes"].stringValue
                     let effect = subJson["Effect"].stringValue
-                    let heartDish = RestoreHeartsDish(food: food, ingredients: ingridients, notes: notes, effect: effect)
+                    let heartDish = DishesModel(food: food, ingredients: ingridients, notes: notes, effect: effect)
                     
                     heartDishes.append(heartDish)
                 }

@@ -1,5 +1,5 @@
 //
-//  RestoreHeartsDishesViewController.swift
+//  DishesCollectionViewController.swift
 //  chefofthewild
 //
 //  Created by Jorge Villa on 3/10/17.
@@ -31,20 +31,28 @@ struct CardLayoutSetupOptions {
     var numberOfCards: Int = 15
 }
 
-class RestoreHeartsDishesViewController : UICollectionViewController, HFCardCollectionViewLayoutDelegate {
+class DishesCollectionViewController : UICollectionViewController, HFCardCollectionViewLayoutDelegate {
     
     @IBOutlet var backgroundView: UIView?
     @IBOutlet var backgroundNavigationBar: UINavigationBar?
     
     var cardCollectionViewLayout: HFCardCollectionViewLayout?
-    var heartDishes = RestoreHeartsApiClient.fetchRestoreHeartsDishes()
+    var dishes = [DishesModel]()
     var colorArray: [UIColor] = []
     var cardLayoutOptions: CardLayoutSetupOptions = CardLayoutSetupOptions()
     var shouldSetupBackgroundView = false
+    var shouldLoadRestoreHeartsDishes = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupExample()
+        
+        if self.shouldLoadRestoreHeartsDishes {
+            self.dishes = DishesApiClient.fetchRestoreHeartsDishes()
+        } else {
+            self.dishes = DishesApiClient.fetchRestoreStaminaDishes()
+        }
+        
+        self.setupCollectionView()
     }
     
     // MARK: CollectionView
@@ -71,14 +79,14 @@ class RestoreHeartsDishesViewController : UICollectionViewController, HFCardColl
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.heartDishes.count
+        return self.dishes.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! DishCollectionViewCell
         cell.backgroundColor = self.colorArray[indexPath.item]
         
-        let heartDish = self.heartDishes[indexPath.item]
+        let heartDish = self.dishes[indexPath.item]
         cell.dishDetails = heartDish.details
         cell.labelText?.text = heartDish.food
         
@@ -97,7 +105,7 @@ class RestoreHeartsDishesViewController : UICollectionViewController, HFCardColl
     
     // MARK: Private Functions
     
-    private func setupExample() {
+    private func setupCollectionView() {
         if let cardCollectionViewLayout = self.collectionView?.collectionViewLayout as? HFCardCollectionViewLayout {
             self.cardCollectionViewLayout = cardCollectionViewLayout
         }

@@ -1,0 +1,76 @@
+[
+   {
+      "Food":"Enduring Fried Wild Greens",
+      "Ingredients":"Endura Carrot",
+      "Effect":"Restore four hearts and overfill your stamina wheel."
+   },
+   {
+      "Food":"Enduring Milk",
+      "Ingredients":"Enduring Carrot Fresh Milk",
+      "Effect":"Restore five hearts and restore and overfill your stamina wheel.",
+      "Notes":""
+   },
+   {
+      "Food":"Enduring Salt-Grilled Prime Meat",
+      "Ingredients":"Endura Carrot x2 Raw Prime Meat Rock Salt",
+      "Effect":"Restore eleven hearts and overfill your stamina wheel."
+   },
+   {
+      "Food":"Enduring Steamed Meat",
+      "Ingredients":"Endura Carrot Raw Prime Meat",
+      "Effect":"Restore seven hearts and overfill you stamina wheel."
+   },
+   {
+      "Food":"Energizing Mushroom Skewer",
+      "Ingredients":"Stamella Shroom",
+      "Effect":"Restore one heart and refill some stamina.",
+      "Notes":"Each Hylian shroom added will restore 1 additional heart."
+   },
+   {
+      "Food":"Energizing Fish and Mushroom Skewer",
+      "Ingredients":"Stamella Shroom Hyrule Bass",
+      "Effect":"Restore three hearts and refill some stamina.",
+      "Notes":""
+   },
+   {
+      "Food":"Energizing Fish Skewer",
+      "Ingredients": "Refill some stamina.",
+      "Notes":"Open flame"
+   },
+   {
+      "Food":"Energizing Fish Skewer",
+      "Ingredients":"Staminoka Bass",
+      "Effect":"Restore two hearts and refill full stamina.",
+      "Notes":""
+   },
+   {
+      "Food":"Energizing Glazed Meat",
+      "Ingredients":"Raw Meat Courser Bee Honey",
+      "Effect":"Restore six hearts and refill some stamina.",
+      "Notes":""
+   },
+   {
+      "Food":"Energizing Honeyed Apple",
+      "Ingredients":"Apple Courser Bee Honey",
+      "Effect":"Restore five hearts and refill some stamina.",
+      "Notes":""
+   },
+   {
+      "Food":"Energizing Meaty Rice Balls",
+      "Ingredients":"Raw Meat Hylian Rice Courser Bee Honey",
+      "Effect":"Restore eight hearts and refill most of your stamina.",
+      "Notes":""
+   },
+   {
+      "Food":"Energizing Steamed Meat",
+      "Ingredients":"Raw Meat Hyrule Herb Stamella Shroom",
+      "Effect":"Restore five hearts and refill some stamina.",
+      "Notes":""
+   },
+   {
+      "Food":"Enduring Steamed Meat",
+      "Ingredients":"Endura Shroom x2 Endura Carrot x2 Raw Gourmet Meat",
+      "Effect":"Restore twenty-one hearts and overfill your stamina wheel.",
+      "Notes":"One whole overfill wheel."
+   }
+]

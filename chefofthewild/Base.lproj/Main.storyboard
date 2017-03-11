@@ -27,13 +27,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-26" y="-5"/>
         </scene>
         <!--Restore Hearts-->
         <scene sceneID="dhf-rz-4XS">
             <objects>
-                <collectionViewController id="oai-Cn-OVG" customClass="RestoreHeartsDishesViewController" customModule="chefofthewild" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" id="koe-QI-RY0">
+                <collectionViewController id="oai-Cn-OVG" customClass="DishesCollectionViewController" customModule="chefofthewild" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" id="koe-QI-RY0">
                         <rect key="frame" x="0.0" y="0.0" width="384" height="512"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,15 +65,15 @@
                                             <rect key="frame" x="0.0" y="80" width="320" height="235"/>
                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <prototypes>
-                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dishDetailCell" textLabel="Y38-F2-Ot4" style="IBUITableViewCellStyleDefault" id="q7o-dK-r2r">
+                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="dishDetailCell" textLabel="Y38-F2-Ot4" style="IBUITableViewCellStyleDefault" id="q7o-dK-r2r">
                                                     <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q7o-dK-r2r" id="v2b-9Y-5LX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y38-F2-Ot4">
-                                                                <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="Y38-F2-Ot4">
+                                                                <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                                 <nil key="textColor"/>
@@ -140,6 +140,9 @@
                     <navigationItem key="navigationItem" title="Restore Hearts" id="OcK-ol-PA2"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="384" height="512"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shouldLoadRestoreHeartsDishes" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="collectionView" destination="koe-QI-RY0" id="eej-qA-0kB"/>
                     </connections>
@@ -208,7 +211,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="1696" y="-280.65967016491754"/>
+            <point key="canvasLocation" x="1550" y="-576"/>
         </scene>
         <!--Hearts-->
         <scene sceneID="N6y-Qc-oLo">
@@ -227,12 +230,12 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGI-pf-Ovu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="-281.10944527736132"/>
+            <point key="canvasLocation" x="756" y="-645"/>
         </scene>
-        <!--Restore Hearts-->
+        <!--Restore Stamina-->
         <scene sceneID="RjX-sy-gSk">
             <objects>
-                <collectionViewController id="WJN-0E-z6R" customClass="RestoreHeartsDishesViewController" customModule="chefofthewild" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="WJN-0E-z6R" customClass="DishesCollectionViewController" customModule="chefofthewild" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" id="qt2-Fo-UsL">
                         <rect key="frame" x="0.0" y="0.0" width="384" height="512"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,6 +267,25 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g79-vx-Wac">
                                             <rect key="frame" x="0.0" y="80" width="320" height="235"/>
                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <prototypes>
+                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="dishDetailCell" textLabel="aYW-H9-R1A" style="IBUITableViewCellStyleDefault" id="Xgh-74-PFT">
+                                                    <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xgh-74-PFT" id="Htr-cO-mTW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="aYW-H9-R1A">
+                                                                <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </tableViewCellContentView>
+                                                </tableViewCell>
+                                            </prototypes>
                                         </tableView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example Card Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNL-uG-vp1">
                                             <rect key="frame" x="8" y="8" width="304" height="21"/>
@@ -318,9 +340,12 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                             <outlet property="delegate" destination="WJN-0E-z6R" id="bdz-EG-vWt"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Restore Hearts" id="IaN-Cz-ry4"/>
+                    <navigationItem key="navigationItem" title="Restore Stamina" id="IaN-Cz-ry4"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="384" height="512"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shouldLoadRestoreHeartsDishes" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="collectionView" destination="qt2-Fo-UsL" id="hUJ-UI-Us2"/>
                     </connections>
@@ -389,7 +414,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="1696" y="750"/>
+            <point key="canvasLocation" x="1602" y="451"/>
         </scene>
         <!--Stamina-->
         <scene sceneID="9hp-W1-0XY">
@@ -408,7 +433,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L6D-Pw-dnp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="762"/>
+            <point key="canvasLocation" x="756" y="521"/>
         </scene>
     </scenes>
 </document>

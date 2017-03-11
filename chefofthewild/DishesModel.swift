@@ -1,5 +1,5 @@
 //
-//  RestoreHeartsDish.swift
+//  DishesModel.swift
 //  chefofthewild
 //
 //  Created by Jorge Villa on 3/10/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RestoreHeartsDish {
+struct DishesModel {
     
     var food: String
     var ingredients: String
