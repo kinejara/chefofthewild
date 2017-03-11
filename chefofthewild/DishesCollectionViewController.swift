@@ -106,6 +106,9 @@ class DishesCollectionViewController : UICollectionViewController, HFCardCollect
     // MARK: Private Functions
     
     private func setupCollectionView() {
+        let softGreenLink = UIColor(colorLiteralRed: 74/255, green: 186/255, blue: 145/255, alpha: 1)
+        self.collectionView?.backgroundColor = softGreenLink
+        
         if let cardCollectionViewLayout = self.collectionView?.collectionViewLayout as? HFCardCollectionViewLayout {
             self.cardCollectionViewLayout = cardCollectionViewLayout
         }
@@ -133,6 +136,8 @@ class DishesCollectionViewController : UICollectionViewController, HFCardCollect
         if(self.cardLayoutOptions.spaceAtTopForBackgroundView == 0) {
             self.cardLayoutOptions.spaceAtTopForBackgroundView = 44 // Height of the NavigationBar in the BackgroundView
         }
+        
+        
         self.collectionView?.backgroundView = self.backgroundView
         self.backgroundNavigationBar?.shadowImage = UIImage()
         self.backgroundNavigationBar?.setBackgroundImage(UIImage(), for: .default)

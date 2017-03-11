@@ -15,8 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.customizeAppStyle()
+        
         return true
+    }
+    
+    private func customizeAppStyle() {
+        let greenLink = UIColor(colorLiteralRed: 13/255, green: 146/255, blue: 99/255, alpha: 1)
+        UINavigationBar.appearance().barTintColor = greenLink
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

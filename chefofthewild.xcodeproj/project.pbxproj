@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		796C935C7929027314DFA6D9 /* Pods_chefofthewild.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F86845FD2DD38874D6F6182E /* Pods_chefofthewild.framework */; };
-		B40CE38E1E736682009F5FB7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40CE38D1E736682009F5FB7 /* TableViewController.swift */; };
 		B40CE3901E7371B4009F5FB7 /* restore_stamina_dishes.json in Resources */ = {isa = PBXBuildFile; fileRef = B40CE38F1E7371B4009F5FB7 /* restore_stamina_dishes.json */; };
 		B480D1011E735CF5008E5798 /* DishesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B480D1001E735CF5008E5798 /* DishesModel.swift */; };
 		B4A52A311E734448002FDC82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A52A301E734448002FDC82 /* AppDelegate.swift */; };
@@ -51,7 +50,6 @@
 		63FB5E6E3AD42E96AD27E57F /* Pods-chefofthewildUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chefofthewildUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-chefofthewildUITests/Pods-chefofthewildUITests.release.xcconfig"; sourceTree = "<group>"; };
 		649B2AF10123EC628692385A /* Pods-chefofthewildUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chefofthewildUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chefofthewildUITests/Pods-chefofthewildUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		68343606CC246D01FBECBA7A /* Pods_chefofthewildTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chefofthewildTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B40CE38D1E736682009F5FB7 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B40CE38F1E7371B4009F5FB7 /* restore_stamina_dishes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = restore_stamina_dishes.json; sourceTree = "<group>"; };
 		B480D1001E735CF5008E5798 /* DishesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishesModel.swift; sourceTree = "<group>"; };
 		B4A52A2D1E734448002FDC82 /* chefofthewild.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chefofthewild.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,7 +127,6 @@
 			children = (
 				B4A52A301E734448002FDC82 /* AppDelegate.swift */,
 				B4CB02061E735534008C764D /* ViewControllers */,
-				B4CB020B1E7355E3008C764D /* ViewModels */,
 				B4CB020A1E7355D0008C764D /* Models */,
 				B4CB02081E735585008C764D /* ApiClients */,
 			);
@@ -222,13 +219,6 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		B4CB020B1E7355E3008C764D /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ViewModels;
-			sourceTree = "<group>";
-		};
 		B4CB020C1E735603008C764D /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				B4A52A601E7345F2002FDC82 /* DishCollectionViewCell.swift */,
-				B40CE38D1E736682009F5FB7 /* TableViewController.swift */,
 			);
 			name = Customs;
 			sourceTree = "<group>";
@@ -534,7 +523,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4CB02101E7356ED008C764D /* DishesApiClient.swift in Sources */,
-				B40CE38E1E736682009F5FB7 /* TableViewController.swift in Sources */,
 				B4A52A611E7345F2002FDC82 /* DishCollectionViewCell.swift in Sources */,
 				B4A52A311E734448002FDC82 /* AppDelegate.swift in Sources */,
 				B4A52A331E734448002FDC82 /* DishesCollectionViewController.swift in Sources */,
