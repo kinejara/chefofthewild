@@ -27,7 +27,6 @@ struct CardLayoutSetupOptions {
     var scrollAreaBottom: CGFloat = 120
     var scrollShouldSnapCardHead: Bool = false
     var scrollStopCardsAtTop: Bool = true
-    
     var numberOfCards: Int = 15
 }
 
@@ -38,13 +37,14 @@ class DishesCollectionViewController : UICollectionViewController, HFCardCollect
     
     var cardCollectionViewLayout: HFCardCollectionViewLayout?
     var dishes = [DishesModel]()
-    var colorArray: [UIColor] = []
     var cardLayoutOptions: CardLayoutSetupOptions = CardLayoutSetupOptions()
     var shouldSetupBackgroundView = false
     var shouldLoadRestoreHeartsDishes = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.customizeAppStyle()
         
         if self.shouldLoadRestoreHeartsDishes {
             self.dishes = DishesApiClient.fetchRestoreHeartsDishes()
@@ -55,12 +55,27 @@ class DishesCollectionViewController : UICollectionViewController, HFCardCollect
         self.setupCollectionView()
     }
     
+    private func customizeAppStyle() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        
+        self.tabBarController?.tabBar.barTintColor = UIColor.clear
+        self.tabBarController?.tabBar.isTranslucent = true
+        self.tabBarController?.tabBar.backgroundColor = UIColor.clear
+        self.tabBarController?.tabBar.layer.backgroundColor = UIColor.clear.cgColor
+        self.tabBarController?.tabBar.shadowImage = nil
+        
+        let defaultBg = UIImage(named: "bg")
+        let toolBarImage = UIImage.image(with: defaultBg!, scaledTo: (self.tabBarController?.tabBar.frame.size)!)
+        
+        self.tabBarController?.tabBar.backgroundImage = toolBarImage
+    }
+    
     // MARK: CollectionView
     
     func cardCollectionViewLayout(_ collectionViewLayout: HFCardCollectionViewLayout, canUnrevealCardAtIndex index: Int) -> Bool {
-        if(self.colorArray.count == 1) {
-            return false
-        }
         return true
     }
     
@@ -84,7 +99,8 @@ class DishesCollectionViewController : UICollectionViewController, HFCardCollect
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! DishCollectionViewCell
-        cell.backgroundColor = self.colorArray[indexPath.item]
+        let greenLink = UIColor(colorLiteralRed: 13/255, green: 146/255, blue: 99/255, alpha: 1)
+        cell.backgroundColor = greenLink
         
         let heartDish = self.dishes[indexPath.item]
         cell.dishDetails = heartDish.details
@@ -120,13 +136,9 @@ class DishesCollectionViewController : UICollectionViewController, HFCardCollect
             self.collectionView?.contentInset.left = 0
             self.collectionView?.contentInset.right = 0
         }
+        
         if(self.shouldSetupBackgroundView == true) {
             self.setupBackgroundView()
-        }
-        
-        let count = cardLayoutOptions.numberOfCards
-        for _ in 0..<count {
-            self.colorArray.append(self.getRandomColor())
         }
         
         self.collectionView?.reloadData()
@@ -137,16 +149,10 @@ class DishesCollectionViewController : UICollectionViewController, HFCardCollect
             self.cardLayoutOptions.spaceAtTopForBackgroundView = 44 // Height of the NavigationBar in the BackgroundView
         }
         
-        
         self.collectionView?.backgroundView = self.backgroundView
         self.backgroundNavigationBar?.shadowImage = UIImage()
         self.backgroundNavigationBar?.setBackgroundImage(UIImage(), for: .default)
     }
     
-    private func getRandomColor() -> UIColor{
-        let randomRed:CGFloat = CGFloat(drand48())
-        let randomGreen:CGFloat = CGFloat(drand48())
-        let randomBlue:CGFloat = CGFloat(drand48())
-        return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
-    }
+    
 }

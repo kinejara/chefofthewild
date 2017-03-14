@@ -20,7 +20,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.83137254901960778" green="0.80784313725490198" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.0" green="0.57635760307312012" blue="0.3831753134727478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" red="0.83137254900000002" green="0.80784313730000001" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
@@ -36,8 +35,8 @@
         <scene sceneID="dhf-rz-4XS">
             <objects>
                 <collectionViewController id="oai-Cn-OVG" customClass="DishesCollectionViewController" customModule="chefofthewild" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" id="koe-QI-RY0">
-                        <rect key="frame" x="0.0" y="0.0" width="384" height="512"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" id="koe-QI-RY0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewLayout key="collectionViewLayout" id="z4T-No-vSw" customClass="HFCardCollectionViewLayout" customModule="HFCardCollectionViewLayout">
@@ -56,9 +55,13 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </collectionViewLayout>
+                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" id="Fpn-IP-V3m">
+                            <rect key="frame" x="0.0" y="-64" width="375" height="667"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="7iI-AU-dqt" customClass="DishCollectionViewCell" customModule="chefofthewild" customModuleProvider="target">
-                                <rect key="frame" x="32" y="0.0" width="320" height="315"/>
+                                <rect key="frame" x="28" y="0.0" width="320" height="315"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="315"/>
@@ -72,11 +75,11 @@
                                                     <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q7o-dK-r2r" id="v2b-9Y-5LX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="Y38-F2-Ot4">
-                                                                <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                                <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                                 <nil key="textColor"/>
@@ -141,8 +144,6 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Restore Hearts" id="OcK-ol-PA2"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="384" height="512"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="shouldLoadRestoreHeartsDishes" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -214,7 +215,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="1550" y="-576"/>
+            <point key="canvasLocation" x="1554" y="-645"/>
         </scene>
         <!--Hearts-->
         <scene sceneID="N6y-Qc-oLo">
@@ -242,7 +243,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
         <scene sceneID="RjX-sy-gSk">
             <objects>
                 <collectionViewController id="WJN-0E-z6R" customClass="DishesCollectionViewController" customModule="chefofthewild" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" id="qt2-Fo-UsL">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" id="qt2-Fo-UsL">
                         <rect key="frame" x="0.0" y="0.0" width="384" height="512"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -262,6 +263,10 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </collectionViewLayout>
+                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" id="bMN-mU-zn4">
+                            <rect key="frame" x="0.0" y="-64" width="384" height="512"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="2Wj-Y2-p3M" customClass="DishCollectionViewCell" customModule="chefofthewild" customModuleProvider="target">
                                 <rect key="frame" x="32" y="0.0" width="320" height="315"/>
@@ -278,11 +283,11 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                                     <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xgh-74-PFT" id="Htr-cO-mTW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="aYW-H9-R1A">
-                                                                <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
+                                                                <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                                 <nil key="textColor"/>
@@ -446,7 +451,8 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
         </scene>
     </scenes>
     <resources>
-        <image name="Hearth" width="50" height="50"/>
-        <image name="Stamina" width="50" height="50"/>
+        <image name="Hearth" width="30" height="30"/>
+        <image name="Stamina" width="30" height="30"/>
+        <image name="bg" width="670" height="1446"/>
     </resources>
 </document>
